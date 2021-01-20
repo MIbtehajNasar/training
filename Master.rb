@@ -1,44 +1,4 @@
 require 'csv'
-
-=begin
-
-program to flatten an array
-
-@out = Array.new
-
-def flatten_array array
-  array.each { |element| element.class == Array ? flatten_array(element) : @out << element }
-end
-
-test = Array['a', 1, ['b', 2], 'c', [3, ['d', 4]]]
-
-flatten_array test
-p @out
-
-
-# Program to get the most frequent element from an array
-
-def random_array(size)
-  Array.new(size) { rand 10 }
-end
-
-def check_frequency(size)
-  arr = random_array size
-  p arr
-  out = Hash.new
-  (0..10).each do |i|
-    out[i] = 0
-  end
-  arr.each do |element|
-    val = out.fetch(element)
-    out[element] = val + 1
-  end
-  p out.key(out.values.max)
-end
-
-check_frequency 5
-=end
-
 def generate_password(total_length, numbers, alphabets, spchar)
   return puts 'yolo' unless total_length == (numbers + alphabets + spchar)
 
